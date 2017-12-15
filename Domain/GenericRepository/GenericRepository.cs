@@ -3,7 +3,7 @@ using Domain.GenericRepository.DataObjects;
 
 namespace Domain.GenericRepository
 {
-	public class GenericRepository<T> : IGenericRepository<T> where T : IEntity, new()
+	public class GenericRepository<T> : IGenericRepository<T> where T : IEntity
 	{
 		public T Create(T unpersistedObject)
 		{

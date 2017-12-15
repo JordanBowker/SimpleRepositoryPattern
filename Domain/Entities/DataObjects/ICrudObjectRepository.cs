@@ -1,5 +1,4 @@
-﻿using Domain.GenericRepository;
-using Domain.GenericRepository.DataObjects;
+﻿using Domain.GenericRepository.DataObjects;
 
 namespace Domain.Entities.DataObjects
 {

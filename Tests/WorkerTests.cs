@@ -2,6 +2,10 @@
 using Castle.Windsor;
 using Domain.Entities;
 using Domain.Entities.DataObjects;
+using Domain.ObjectFactory;
+using Domain.ObjectFactory.DataContracts;
+using Domain.Services;
+using Domain.Services.DataObjects;
 using Domain.Workers.DataObjects;
 using NUnit.Framework;
 
@@ -16,6 +20,10 @@ namespace Tests
 		{
 			var windsorContainer = new WindsorContainer();
 
+			windsorContainer.Register(Component.For<IService>().ImplementedBy<Service>());
+			windsorContainer.Register(Component.For<CrudObject>());
+
+			windsorContainer.Register(Component.For(typeof(IObjectFactory<>)).ImplementedBy(typeof(ObjectFactory<>)));
 			windsorContainer.Register(Component.For<ICrudObjectRepository>().ImplementedBy<CrudObjectRepository>());
 			windsorContainer.Register(Component.For<IWorkerClass>().ImplementedBy<WorkerClass>());
 

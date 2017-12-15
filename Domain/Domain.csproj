@@ -41,6 +41,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\CrudObjectRepository.cs" />
+    <Compile Include="Services\Service.cs" />
+    <Compile Include="Services\DataObjects\IService.cs" />
+    <Compile Include="ObjectFactory\DataContracts\IObjectFactory.cs" />
+    <Compile Include="ObjectFactory\ObjectFactory.cs" />
     <Compile Include="Workers\DataObjects\IWorkerClass.cs" />
     <Compile Include="Workers\DataObjects\WorkerClass.cs" />
     <Compile Include="Entities\CrudObject.cs" />
